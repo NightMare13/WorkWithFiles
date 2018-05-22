@@ -12,22 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MvvmDialogs;
-using WorkWithFiles.Model;
-using WorkWithFiles.ViewModels;
 
 namespace WorkWithFiles
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for RenameDialog.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class RenameDialog : Window
     {
-        public MainWindow()
+        public RenameDialog()
         {
             InitializeComponent();
-            var viewModel = new MainWindowViewModel(new FileModel() { Name = "Empty..." }, new DialogService());
-            this.DataContext = viewModel;
         }
     }
 }

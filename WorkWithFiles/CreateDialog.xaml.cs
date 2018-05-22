@@ -13,21 +13,18 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MvvmDialogs;
-using WorkWithFiles.Model;
-using WorkWithFiles.ViewModels;
 
 namespace WorkWithFiles
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CreateDialog.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CreateDialog : Window, IWindow
     {
-        public MainWindow()
+        public CreateDialog()
         {
             InitializeComponent();
-            var viewModel = new MainWindowViewModel(new FileModel() { Name = "Empty..." }, new DialogService());
-            this.DataContext = viewModel;
         }
+        public ContentControl Owner { get; set; }
     }
 }
